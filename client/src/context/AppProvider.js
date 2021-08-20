@@ -24,6 +24,7 @@ export default function AppProvider({ children }) {
 
 	useEffect(() => {
 		fetchData();
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	return <AppContext.Provider value={{ fetchData, chatArr }}>{children}</AppContext.Provider>;
