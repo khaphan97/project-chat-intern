@@ -1,0 +1,149 @@
+{
+	"content": {
+		"conversation_start": {
+			"text": "Nhấn nút để bắt đầu chat",
+			"buttons": [
+				{
+					"text": "Bắt đầu chat",
+					"data": {
+						"event": "capture",
+						"next": "conversation_welcome"
+					}
+				}
+			]
+		},
+		"conversation_welcome": {
+			"text": "Chào mừng bạn đến với cửa hàng ABC",
+			"buttons": [
+				{
+					"text": "Xem danh sách sản phẩm",
+					"data": {
+						"next": "list_items",
+						"event": "goto"
+					}
+				}
+			]
+		},
+		"list_items": {
+			"text": "Danh sách sản phẩm",
+			"buttons": [
+				{
+					"thumbnail": "imgUrl1",
+					"text": "Bàn",
+					"data": {
+						"event": "get_item",
+						"value": "1",
+						"next": "show_item_1",
+						"key": "item_select"
+					}
+				},
+				{
+					"thumbnail": "imgUrl2",
+					"text": "Ghế",
+					"data": {
+						"event": "get_item",
+						"value": "2",
+						"next": "show_item_2",
+						"key": "item_select"
+					}
+				},
+				{
+					"thumbnail": "imgUrl3",
+					"text": "Nệm",
+					"data": {
+						"event": "get_item",
+						"value": "3",
+						"next": "show_item_3",
+						"key": "item_select"
+					}
+				}
+			]
+		},
+		"show_item_1": {
+			"text": "Cái bàn ( 100,000đ )",
+			"sub_text": "Chi tiết sản phẩm",
+			"buttons": [
+				{
+					"text": "Mua sản phẩm",
+					"data": {
+						"event": "capture",
+						"value": "itemId",
+						"next": "buy_item"
+					}
+				},
+				{
+					"text": "Xem danh sách sản phẩm",
+					"data": {
+						"event": "goto",
+						"next": "list_items"
+					}
+				}
+			]
+		},
+		"show_item_2": {
+			"text": "Cái ghế (200,000đ)",
+			"sub_text": "Chi tiết sản phẩm",
+			"buttons": [
+				{
+					"text": "Mua sản phẩm",
+					"data": {
+						"event": "capture",
+						"value": "itemId",
+						"next": "buy_item"
+					}
+				},
+				{
+					"text": "Xem danh sách sản phẩm",
+					"data": {
+						"event": "goto",
+						"next": "list_items"
+					}
+				}
+			]
+		},
+		"show_item_3": {
+			"text": "Cái nệm ( 300,000đ )",
+			"sub_text": "Chi tiết sản phẩm",
+			"buttons": [
+				{
+					"text": "Mua sản phẩm",
+					"data": {
+						"event": "capture",
+						"value": "itemId",
+						"next": "buy_item"
+					}
+				},
+				{
+					"text": "Xem danh sách sản phẩm",
+					"data": {
+						"event": "goto",
+						"next": "list_items"
+					}
+				}
+			]
+		},
+		"buy_item": {
+			"text": "Mua hàng thành công",
+			"buttons": [
+				{
+					"text": "Xem sản phẩm khác",
+					"data": {
+						"event": "goto",
+						"next": "list_items"
+					}
+				},
+				{
+					"text": "Kết thúc cuộc trò chuyện",
+					"data": {
+						"event": "goto",
+						"next": "conversation_end"
+					}
+				}
+			]
+		},
+		"conversation_end": {
+			"text": "Xin chào và hẹn gặp lại quý khách",
+			"buttons": []
+		}
+	}
+}
