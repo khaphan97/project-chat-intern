@@ -7,14 +7,12 @@ export default function AppProvider({ children }) {
 	const [chatArr, setChatArr] = useState([]);
 
 	const fetchData = async (userChoose) => {
-		const status = userChoose?.data.next || 'conversation_start';
+		const status = userChoose ? userChoose.data.next : 'conversation_start';
 
-		let newChatArr;
+		let newChatArr = [];
 
-		if (status !== 'conversation_start') {
+		if (userChoose) {
 			newChatArr = [...chatArr, { text: userChoose.text, type: 'user' }];
-		} else {
-			newChatArr = [...chatArr];
 		}
 
 		const { data } = await axios.get(`http://localhost:8080/chat/get/${status}`);
