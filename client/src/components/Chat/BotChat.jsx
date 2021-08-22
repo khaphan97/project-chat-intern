@@ -13,7 +13,7 @@ export default function BotChat({ node, handleClick, userChooseHandle }) {
 
 	return (
 		<div>
-			<ChatStyled background='#ff4d4f'>
+			<ChatStyled background='#ff4d4f' className='chat-container'>
 				<p>{text}</p>
 				<div className='button-group'>
 					{buttons.map((button, idx) => (

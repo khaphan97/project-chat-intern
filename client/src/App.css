@@ -40,3 +40,15 @@
 .ant-card-body {
 	padding: 0 !important;
 }
+
+@keyframes wave-text {
+	0% {
+		transform: translateY(0em);
+	}
+	60% {
+		transform: translateY(-1em);
+	}
+	100% {
+		transform: translateY(0em);
+	}
+}

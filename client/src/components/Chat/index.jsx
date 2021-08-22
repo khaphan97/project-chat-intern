@@ -7,6 +7,7 @@ export default function MyChat(props) {
 		<div>
 			<Card title='Chat Bot' style={{ boxShadow: '0 0 5px #eee', padding: '0' }}>
 				<div
+					id='myBox'
 					style={{ height: '500px', width: '400px', overflowY: 'auto', padding: '15px' }}
 				>
 					<ChatBlock />
